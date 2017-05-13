@@ -2,7 +2,7 @@
   "name": "facfire-ng1",
   "description": "FactoryFire that is a factory for angular1 firebase env",
   "main": [
-    "www/lib/facfire-ng1/facfire-ng1.min.js"
+    "www/lib/facfire-ng1/facfire-ng1.js"
   ],
   "keywords": [
     "firebase",
