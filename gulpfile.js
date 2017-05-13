@@ -4,30 +4,53 @@ var bower = require('bower');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
+var minify = require('gulp-minify');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 
 var paths = {
-  sass: ['./scss/**/*.scss']
+  sass: {
+    source: ['./scss/**/*.scss'],
+    main: './scss/ionic.app.scss',
+    dest: './www/css/',
+    ext: '.min.css'
+  },
+  fac: {
+    source: './src-lib/**/*.js',
+    main: './src-lib/fac_fire.js',
+    dest: './www/lib/facfire-ng1/',
+    output: 'facfire-ng1.js',
+    ext: '.min.js'
+  }
 };
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass', 'fac']);
 
 gulp.task('sass', function(done) {
-  gulp.src('./scss/ionic.app.scss')
+  gulp.src(paths.sass.main)
     .pipe(sass())
     .on('error', sass.logError)
-    .pipe(gulp.dest('./www/css/'))
+    .pipe(gulp.dest(paths.sass.dest))
     .pipe(minifyCss({
       keepSpecialComments: 0
     }))
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('./www/css/'))
+    .pipe(rename({ extname: paths.sass.ext }))
+    .pipe(gulp.dest(paths.sass.dest))
     .on('end', done);
 });
 
-gulp.task('watch', ['sass'], function() {
-  gulp.watch(paths.sass, ['sass']);
+gulp.task('fac', function(done) {
+  gulp.src(paths.fac.source)
+    .pipe(concat(paths.fac.output))
+    .pipe(minify())
+    .pipe(gulp.dest(paths.fac.dest))
+    .on('end', done);
+});
+
+
+gulp.task('watch', ['sass', 'fac'], function() {
+  gulp.watch(paths.sass.source, ['sass']);
+  gulp.watch(paths.fac.source, ['fac']);
 });
 
 gulp.task('install', ['git-check'], function() {
@@ -49,3 +72,6 @@ gulp.task('git-check', function(done) {
   }
   done();
 });
+
+// fix ionic2 CLI Gulp bug
+gulp.task('serve:before', ['default', 'watch']);
