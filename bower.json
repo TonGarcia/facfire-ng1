@@ -20,7 +20,20 @@
     "platforms",
     "res",
     "scss",
-    "resources"
+    "resources",
+    "hooks",
+    "src-lib",
+    "src-lib",
+    "www",
+    "gulpfile.js",
+    "config.xml",
+    ".gitignore",
+    ".editorconfig",
+    ".bowerrc",
+    "package.json",
+    "ionic.config.json",
+    "!www/lib/facfire-ng1/",
+    "!www/lib/facfire-ng1/*"
   ],
   "private": false
 }
