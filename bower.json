@@ -1,6 +1,25 @@
 {
   "name": "facfire-ng1",
-  "private": "false",
-  "devDependencies": {
-  }
+  "description": "FactoryFire that is a factory for angular1 firebase env",
+  "main": [
+    "www/lib/facfire-ng1/facfire-ng1.min.js"
+  ],
+  "keywords": [
+    "firebase",
+    "angularfire"
+  ],
+  "authors": [
+    "Ilton Silveira <iltonsilveira91@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "plugins",
+    "platforms",
+    "res",
+    "scss",
+    "resources"
+  ],
+  "private": false
 }
