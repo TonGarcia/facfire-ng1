@@ -20,7 +20,11 @@ var paths = {
     main: './src-lib/fac_fire.js',
     dest: './www/lib/facfire-ng1/',
     output: 'facfire-ng1.js',
-    ext: '.min.js'
+    ext: '.min.js',
+    prod: {
+      output: 'facfire-ng1.js',
+      dest: './dist/'
+    }
   }
 };
 
@@ -40,13 +44,20 @@ gulp.task('sass', function(done) {
 });
 
 gulp.task('fac', function(done) {
+  // Dev ENV
   gulp.src(paths.fac.source)
     .pipe(concat(paths.fac.output))
     .pipe(minify())
     .pipe(gulp.dest(paths.fac.dest))
     .on('end', done);
-});
 
+  // Prod ENV
+  gulp.src(paths.fac.source)
+    .pipe(concat(paths.fac.prod.output))
+    .pipe(minify())
+    .pipe(gulp.dest(paths.fac.prod.dest))
+    .on('end', done);
+});
 
 gulp.task('watch', ['sass', 'fac'], function() {
   gulp.watch(paths.sass.source, ['sass']);

@@ -33,8 +33,7 @@
     ".editorconfig",
     ".bowerrc",
     "package.json",
-    "ionic.config.json",
-    "!www/lib/facfire-ng1/"
+    "ionic.config.json"
   ],
   "private": false
 }
