@@ -4,18 +4,18 @@ FacFire is a FactoryFire framework to speedup the angular+firebase development e
 ## Firebase Fetures implemented
 It framework provide as simple facade the listed features:
 
-1. Firebase Auth actions
+1. Firebase Auth actions (__since v0__)
     * Login (SignIn)
     * Registration (SignUp)
     * Retrieve Password
     * Social Login (web & mobile-native (ionic))
-1. Firebase CRUD
+1. Firebase CRUD (__since v0__)
     * Validators (with popup alert)
     * Facade Access to CRUD actions (with angularfire querying)
-1. MobileNative (ionic)
+1. MobileNative (ionic) (__since v1__)
     * Social LogIn
     * Google Map
-    * Call External App
+    * Call an Installed App on the Device (Android only)
 
 ## Installing it framework (production)
 It is a ionic start project, so you might run the installations bellow, which are not versionated on git
