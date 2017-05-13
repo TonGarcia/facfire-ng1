@@ -27,17 +27,47 @@ It is a ionic start project, so you might run the installations bellow, which ar
         $ bower install facfire-ng1 --save
     ```
 
-2. Add it to your HTML head
+1. Add it to your HTML head
     ```html
+        <!-- FacFire Framework, it MUST be before the app.js (it includes settings that might be overwrite -->
         <script src="facfire-ng1/dist/facfire-ng1.min.js"></script>
+    ```
+
+1. Add your Firebase settings
+    ```javascript
+      // Initialize Firebase (copy it from your firebase project & insert at the end of you app.js)
+      var config = {
+        apiKey: "APIKEY",
+        authDomain: "FIREBASE_APP_NAME.firebaseapp.com",
+        databaseURL: "https://FIREBASE_APP_NAME.firebaseio.com",
+        projectId: "FIREBASE_APP_NAME",
+        storageBucket: "FIREBASE_APP_NAME.appspot.com",
+        messagingSenderId: "FIREBASE_APP_MESSAGING_ID"
+      };
+      firebase.iindenitializeApp(config);
     ```
 
 ### __if non-bower__ project (using CDN)
 
-- Remember to change {version} to your app dependency, like 0.0.6, for example
+1. Add into your HTML (__Remember to change {version} to your app dependency, like 0.0.6, for example__)
     ```html
+        <!-- FacFire Framework, it MUST be before the app.js (it includes settings that might be overwrite -->
         <script src="https://bowercdn.net/c/facfire-ng1-{version}/dist/facfire-ng1-min.js"></script>
     ```
+    
+1. Add your Firebase settings
+    ```javascript
+      // Initialize Firebase (copy it from your firebase project & insert at the end of you app.js)
+      var config = {
+        apiKey: "APIKEY",
+        authDomain: "FIREBASE_APP_NAME.firebaseapp.com",
+        databaseURL: "https://FIREBASE_APP_NAME.firebaseio.com",
+        projectId: "FIREBASE_APP_NAME",
+        storageBucket: "FIREBASE_APP_NAME.appspot.com",
+        messagingSenderId: "FIREBASE_APP_MESSAGING_ID"
+      };
+      firebase.iindenitializeApp(config);
+    ``` 
 
 ## How to contribute with code (development-mode)
 

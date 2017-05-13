@@ -8,4 +8,4 @@ var config = {
   messagingSenderId: "133488604194"
 };
 // TODO: add next line to main app (ionic & non-ionic) file; add it warning in the README
-// TODO: firebase.initializeApp(config);
+// TODO: firebase.iindenitializeApp(config);

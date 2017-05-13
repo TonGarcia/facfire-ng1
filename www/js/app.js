@@ -1,11 +1,11 @@
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// 'app' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'app.services' is found in services.js
 // 'app.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'app.controllers', 'app.services'])
+angular.module('app', ['ionic', 'app.controllers', 'app.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -81,5 +81,15 @@ angular.module('starter', ['ionic', 'app.controllers', 'app.services'])
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
-
 });
+
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBCM5A9eHJp1bNmyk9OGGsiT6VrvqJBMeI",
+  authDomain: "facfire-ae64e.firebaseapp.com",
+  databaseURL: "https://facfire-ae64e.firebaseio.com",
+  projectId: "facfire-ae64e",
+  storageBucket: "facfire-ae64e.appspot.com",
+  messagingSenderId: "133488604194"
+};
+firebase.iindenitializeApp(config);
