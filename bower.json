@@ -25,6 +25,8 @@
     "src-lib",
     "src-lib",
     "www",
+    "www/*",
+    "www/**/.*",
     "gulpfile.js",
     "config.xml",
     ".gitignore",
