@@ -12,7 +12,7 @@ var config = {
 //'fac-fire.controllers', 'fac-fire.directives', 'fac-fire.factories', 
 var FacFireModule = angular.module('fac-fire', ['fac-fire.services']);
 FacFireModule
-  .constant('Popup', {
+  .constant('PopupConst', {
     delay: 3000, //How long the popup message should show before disappearing (in milliseconds -> 3000 = 3 seconds).
     shotDelay: 1000,
     longDelay: 7000,
@@ -69,9 +69,3 @@ FacFireModule
     authenticating: 10,
     canceling: 12
   });
-
-// var FacFireControllers = angular.module('fac-fire.controllers', ['ionic', 'firebase']);
-// var FacFireDirectives = angular.module('fac-fire.directives', ['ionic', 'firebase']);
-// var FacFireFactories = angular.module('fac-fire.factories', ['ionic', 'firebase']);
-// var FacFireServices = angular.module('fac-fire.services', ['ionic', 'firebase']);
-

@@ -12,7 +12,7 @@ var config = {
 //'fac-fire.controllers', 'fac-fire.directives', 'fac-fire.factories', 
 var FacFireModule = angular.module('fac-fire', ['fac-fire.services']);
 FacFireModule
-  .constant('Popup', {
+  .constant('PopupConst', {
     delay: 3000, //How long the popup message should show before disappearing (in milliseconds -> 3000 = 3 seconds).
     shotDelay: 1000,
     longDelay: 7000,
@@ -77,7 +77,7 @@ FacFireModule
 
 
 angular.module('fac-fire.services', [])
-  .service('FFPopup', function() {
+  .service('FFPopup', function(PopupConst) {
 
     var Popups = {
       show: function() {
@@ -85,7 +85,7 @@ angular.module('fac-fire.services', [])
         //   template: '<ion-spinner icon="android"></ion-spinner>'
         // });
 
-        alert("oi");
+        alert(PopupConst.accountAlreadyExists);
       }
       // ,
       // hideModal: function() {

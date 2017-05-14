@@ -1,7 +1,8 @@
 angular.module('app.controllers', [])
 
-.controller('DashCtrl', function($scope, FFPopup) {
-  FFPopup.show();
+.controller('DashCtrl', function($scope, PopupConst) {
+  //FFPopup.show();
+  alert(PopupConst.accountAlreadyExists)
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {

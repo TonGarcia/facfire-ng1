@@ -1,5 +1,5 @@
 angular.module('fac-fire.services', [])
-  .service('FFPopup', function() {
+  .service('FFPopup', function(PopupConst) {
 
     var Popups = {
       show: function() {
@@ -7,7 +7,7 @@ angular.module('fac-fire.services', [])
         //   template: '<ion-spinner icon="android"></ion-spinner>'
         // });
 
-        alert("oi");
+        alert(PopupConst.accountAlreadyExists);
       }
       // ,
       // hideModal: function() {
