@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'app.services' is found in services.js
 // 'app.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers', 'app.services'])
+angular.module('app', ['ionic', 'fac-fire', 'app.controllers', 'app.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -92,4 +92,4 @@ var config = {
   storageBucket: "facfire-ae64e.appspot.com",
   messagingSenderId: "133488604194"
 };
-firebase.iindenitializeApp(config);
+firebase.initializeApp(config);

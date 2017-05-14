@@ -1,7 +1,7 @@
 {
   "name": "facfire-ng1",
   "description": "FactoryFire that is a factory for angular1 firebase env",
-  "directory": "www/lib/facfire-ng1", 
+  "directory": "www/lib/facfire-ng1",
   "main": [
     "www/lib/facfire-ng1/facfire-ng1.js"
   ],
@@ -35,5 +35,9 @@
     "package.json",
     "ionic.config.json"
   ],
-  "private": false
+  "private": false,
+  "dependencies": {
+    "firebase": "^3.9.0",
+    "angularfire": "^2.3.0"
+  }
 }

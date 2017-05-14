@@ -12,13 +12,13 @@
     ],
     "fac": [
       "src-lib/*.js",
-      "src-lib/**/*.js",
-      "src-lib/*.scss"
+      "src-lib/**/*.js"
     ],
     "livereload": [
       "www/**/*.html",
       "www/**/*.js",
-      "www/**/*.css"
+      "www/**/*.css",
+      "src-lib/**/*"
     ]
   },
   "gulpStartupTasks": [

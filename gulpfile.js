@@ -48,8 +48,7 @@ gulp.task('fac', function(done) {
   gulp.src(paths.fac.source)
     .pipe(concat(paths.fac.output))
     .pipe(minify())
-    .pipe(gulp.dest(paths.fac.dest))
-    .on('end', done);
+    .pipe(gulp.dest(paths.fac.dest));
 
   // Prod ENV
   gulp.src(paths.fac.source)

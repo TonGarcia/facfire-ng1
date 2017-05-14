@@ -29,8 +29,12 @@ It is a ionic start project, so you might run the installations bellow, which ar
 
 1. Add it to your HTML head
     ```html
-        <!-- FacFire Framework, it MUST be before the app.js (it includes settings that might be overwrite -->
-        <script src="facfire-ng1/dist/facfire-ng1.min.js"></script>
+      <!-- Firebase Dependencies -->
+      <script src="lib/firebase/firebase.js"></script>
+      <script src="lib/angularfire/dist/angularfire.min.js"></script>   
+      
+      <!-- FacFire Framework, it MUST be before the app.js (it includes settings that might be overwrite -->
+      <script src="facfire-ng1/dist/facfire-ng1.min.js"></script>
     ```
 
 1. Add your Firebase settings
@@ -51,6 +55,10 @@ It is a ionic start project, so you might run the installations bellow, which ar
 
 1. Add into your HTML (__Remember to change {version} to your app dependency, like 0.0.6, for example__)
     ```html
+       <!-- Firebase Dependencies -->
+       <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+       <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    
         <!-- FacFire Framework, it MUST be before the app.js (it includes settings that might be overwrite -->
         <script src="https://bowercdn.net/c/facfire-ng1-{version}/dist/facfire-ng1-min.js"></script>
     ```
